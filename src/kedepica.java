@@ -14,11 +14,19 @@ public class kedepica {
 			pica=lielums;
 			return pica;
 		}
+		public static double cena(double cena) {
+			return cena;
+		}
+		public static double topings(double piedevasCena) {
+			return piedevasCena;
+		}
 
 		public static void main(String[] args) {
 			String izvele;
-			int pica;
-			double pievesana;
+			double nauda;
+			int pica = 0;
+			double piedevasCena = 0;
+			
 			do {
 				izvele = JOptionPane.showInputDialog("pica/pilna cena/pievešana/piedevas.");
 				switch(izvele) {
@@ -26,19 +34,14 @@ public class kedepica {
 				pica=lielums(pica);
 				break;
 				case "pilna cena":
-				pilnacena=cena(pica);
-				break;
-				case "pievešana":
-				pievesana=pievesanasC(pica);
+				nauda=cena(pica);
 				break;
 				case "piedevas":
-				piedevas=topings(piedevas);
+				piedevasCena=topings(piedevasCena);
 				break;
 				}
 				
 			}while(!izvele.equals("beigt"));
-
-			
 		}
 
 	}

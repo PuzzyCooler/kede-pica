@@ -1,3 +1,7 @@
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.swing.JOptionPane;
 public class kedepica {
 	
@@ -30,6 +34,23 @@ public class kedepica {
 			return piedevasCena;
 			
 		}
+		public static int persona(int pica) {
+			try {
+			String vards=JOptionPane.showInputDialog("Personu sauc: ");
+			String adrese=JOptionPane.showInputDialog("Adrese: ");
+			int tel=Integer.parseInt(JOptionPane.showInputDialog("Talrunis: "));
+				FileWriter fw=new FileWriter("klients.txt");
+				PrintWriter print=new PrintWriter(fw);
+				print.println("Klienta vards-"+vards);
+				print.println("Klienta adrese-"+adrese);
+				print.println("Klienta talrunis-"+tel);
+				JOptionPane.showMessageDialog(null, "Saglabāts!");
+				print.close();
+			} catch (IOException e) {
+				JOptionPane.showMessageDialog(null, "kļuda");
+			}
+			return pica;
+		}
 
 		public static void main(String[] args) {
 			String izvele;
@@ -39,7 +60,7 @@ public class kedepica {
 			double piedevasCena = 0;
 			
 			do {
-				izvele = JOptionPane.showInputDialog("pica/pilna cena/pievešana/piedevas.");
+				izvele = JOptionPane.showInputDialog("pica/pilna cena/klients/piedevas.");
 				switch(izvele) {
 				case "pica":
 				pica=lielums(pica);
@@ -50,6 +71,9 @@ public class kedepica {
 				case "piedevas":
 				piedevasCena=topings(piedevasCena);
 				break;
+				case "klients":
+					persona(pica);
+					break;
 				}
 				
 			}while(!izvele.equals("beigt"));

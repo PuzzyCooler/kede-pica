@@ -1,0 +1,3 @@
+Klienta vards-reinis
+Klienta adrese-baseins 13
+Klienta talrunis-256789

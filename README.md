@@ -2,7 +2,7 @@
 
 ## Mana picērija
 
-! [pica](https://toppng.com/uploads/preview/transparent-png-pizza-pepperoni-pizza-1156311772084svgw9hld.png)
+! [pica](https://www.nicepng.com/png/full/68-689198_pizza-download-png-image-meat-pizza-png.png)
 - [x] Projekta sākšana
 - [ ] Proejekta izvilkšana uz gitHub
 - [ ] Projekta izgrūšana uz github

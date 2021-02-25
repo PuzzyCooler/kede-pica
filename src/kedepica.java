@@ -69,7 +69,7 @@ public class kedepica {
 			int pica = 0;
 			int lielums=0;
 			do {
-				izvele = JOptionPane.showInputDialog("pica/pilna cena/klients/saglabat/beigt.");
+				izvele = JOptionPane.showInputDialog("pica/pilna cena/klients/saglabat/beigt");
 				switch(izvele) {
 				case "pica":
 				pica=lielums(pica);

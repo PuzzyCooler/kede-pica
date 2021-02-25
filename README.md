@@ -6,4 +6,5 @@
 - [x] Projekta sākšana
 - [ ] Proejekta izvilkšana uz gitHub
 - [ ] Projekta izgrūšana uz github
+
 :yum::pizza::beverage_box:

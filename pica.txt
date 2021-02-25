@@ -1,0 +1,2 @@
+picas cena: 30.0
+Picas lielums: 0

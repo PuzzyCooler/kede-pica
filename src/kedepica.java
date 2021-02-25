@@ -19,20 +19,17 @@ public class kedepica {
 			return pica;
 		}
 		public static double cena(int pica) {
-			double picaC;
+			double cena;
 			if(pica==60) {
-				picaC= 10.99;
-				JOptionPane.showMessageDialog(null, "Picas cena ir"+picaC);
+				cena= 10.99;
+				JOptionPane.showMessageDialog(null, "Picas cena ir"+cena);
+				
 			}
 			else{
-				picaC=5.99;
-				JOptionPane.showMessageDialog(null,"Picas cena ir"+picaC);
+				cena=5.99;
+				JOptionPane.showMessageDialog(null,"Picas cena ir"+cena);
 			}
-			return pica;
-		}
-		public static double topings(double piedevasCena) {
-			return piedevasCena;
-			
+			return cena;
 		}
 		public static int persona(int pica) {
 			try {
@@ -51,26 +48,38 @@ public class kedepica {
 			}
 			return pica;
 		}
+		public static int saglabat(double cena, int pica) {
+			int picaLiel=pica;
+			
+			try {
+				FileWriter fw=new FileWriter("pica.txt");
+				PrintWriter print=new PrintWriter(fw);
+				print.println("picas cena: "+cena);
+				print.println("Picas lielums: "+pica);
+				print.close();
+			}catch (IOException e) {
+				JOptionPane.showMessageDialog(null, "kļuda");
+			}
+			return 0;
+		}
 
 		public static void main(String[] args) {
 			String izvele;
-			double nauda;
+			double picaC=0, cena = 0;
 			int pica = 0;
 			int lielums=0;
-			double piedevasCena = 0;
-			
 			do {
-				izvele = JOptionPane.showInputDialog("pica/pilna cena/klients/piedevas.");
+				izvele = JOptionPane.showInputDialog("pica/pilna cena/klients/saglabat.");
 				switch(izvele) {
 				case "pica":
 				pica=lielums(pica);
 				break;
 				case "pilna cena":
-				nauda=cena(pica);
+				cena=cena(pica);
 				break;
-				case "piedevas":
-				piedevasCena=topings(piedevasCena);
-				break;
+				case "saglabat":
+					saglabat(pica, (int) cena);
+					break;
 				case "klients":
 					persona(pica);
 					break;
